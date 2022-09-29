@@ -1,0 +1,89 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%) ;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 3em;
+  color: hsl(238, 29%, 16%);
+  margin-bottom: 1em;
+}
+
+.main {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  width: 70em;
+  border-radius: 2em;
+}
+
+.imgdiv {
+  background-image: url(../images/illustration-woman-online-desktop.svg),url(../images/bg-pattern-desktop.svg) ;
+  background-position:  -5em,-30em -16em;
+  background-size: 35em, 60em ;
+  background-repeat: no-repeat, no-repeat;
+  width: 50%;
+  position: relative;
+}
+
+.qnadiv {
+  padding: 5em 0em;
+  width: 50%;
+
+  ul {
+    list-style: none;
+    padding: 0em;
+    margin: 0 10em 3em 0;
+  }
+
+  li {
+    position: relative;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding: 1.5em 0;
+    color: hsl(237, 12%, 33%);
+
+    span {
+      display: block;
+      margin-top: 1em;
+      color: hsl(240, 6%, 50%) ;
+    }
+
+    .hidden {
+      display: none;
+    }
+      
+    img {
+      position: absolute;
+      right: 0;
+      top: 1.4em;
+    }  
+  }
+}
+
+
+    
+  
+
+.attribution {
+  font-size: 11px;
+  text-align: center; 
+  position: absolute;
+  bottom: 0;
+
+  a {
+    color: hsl(167deg 100% 52%); 
+  }
+}
+ 
+
