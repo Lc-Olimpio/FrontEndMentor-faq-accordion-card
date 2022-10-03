@@ -23,33 +23,56 @@ h1 {
 .main {
   background-color: hsl(0deg, 0%, 100%);
   display: flex;
+  justify-content: space-between;
   width: 70em;
   border-radius: 2em;
+  margin: 3em;
 }
 
 .imgdiv {
   background-image: url(../images/illustration-woman-online-desktop.svg), url(../images/bg-pattern-desktop.svg);
-  background-position: -5em, -30em -16em;
-  background-size: 35em, 60em;
+  background-position: -5em, -40em -18em;
+  background-size: 35em, 70em;
   background-repeat: no-repeat, no-repeat;
-  width: 50%;
+  width: 49%;
   position: relative;
+}
+.imgdiv img:first-child {
+  position: absolute;
+  left: -7.5em;
+  top: 17em;
+}
+.imgdiv img:last-child {
+  display: none;
 }
 
 .qnadiv {
   padding: 5em 0em;
-  width: 50%;
+  width: 49%;
 }
 .qnadiv ul {
   list-style: none;
-  padding: 0em;
+  padding-right: 1em;
   margin: 0 10em 3em 0;
+  height: 22em;
+}
+.qnadiv ul .selected > p {
+  font-weight: bold;
 }
 .qnadiv li {
   position: relative;
   border-bottom: 1px solid hsl(240deg, 5%, 91%);
   padding: 1.5em 0;
   color: hsl(237deg, 12%, 33%);
+}
+.qnadiv li:hover {
+  cursor: pointer;
+}
+.qnadiv li p {
+  margin-right: 1em;
+}
+.qnadiv li:hover p {
+  color: hsl(14deg, 88%, 65%);
 }
 .qnadiv li span {
   display: block;
@@ -62,7 +85,11 @@ h1 {
 .qnadiv li img {
   position: absolute;
   right: 0;
-  top: 1.4em;
+  top: 1.8em;
+  transition: 300ms;
+}
+.qnadiv li .rotate {
+  transform: rotate(180deg);
 }
 
 .attribution {
@@ -73,4 +100,45 @@ h1 {
 }
 .attribution a {
   color: hsl(167deg, 100%, 52%);
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (max-width: 820px) {
+  h1 {
+    margin-bottom: 0.5em;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .imgdiv {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: 20em;
+    background-position: center -11.5em;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 8em;
+  }
+  .imgdiv img:first-child {
+    display: none;
+  }
+  .imgdiv img:last-child {
+    display: block;
+    position: relative;
+    margin: auto;
+    top: -95px;
+    left: auto;
+    width: 18em;
+  }
+  .qnadiv {
+    padding: 1em 0;
+    width: 100%;
+    height: 36em;
+    text-align: center;
+  }
+  .qnadiv ul {
+    list-style: none;
+    padding: 0 1em;
+    margin: auto;
+    max-width: 35em;
+  }
+}
